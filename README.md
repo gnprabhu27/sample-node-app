@@ -33,20 +33,13 @@ docker ps
 
 ###### 5. Check the app components
  kubectl -n deployment get pods
+ 
+####### 6. Check the state of your Docker Desktop cluster
+ kubectl get nodes
 
-
-####### 6. Check the state of your Docker Desktop cluster:
-
-  kubectl get nodes
-
-######### 7. Run a familiar application:
-
-  kubectl apply -f ./deployment.yaml
-
-
+######## 7. Run a familiar application:
+ kubectl apply -f ./deployment.yaml
 ######### 8.Check the app components
-kubectl -n deployment get pods
-
-##########  9.To see the ReplicaSet (rs) created by the Deployment, 
-
-  kubectl get rs
+ kubectl -n deployment get pods
+########## 9.To see the ReplicaSet (rs) created by the Deployment, 
+ kubectl get rs
