@@ -9,6 +9,7 @@ Great for testing simple deployments to the cloud
 `npm install`
 
 `npm start`
+
 ###1. Create Docker file
 FROM artifactory.service.anz:8118/node:9-slim //Artificatory - running on 8118 is replicas of Docker-Hub
 WORKDIR /app
