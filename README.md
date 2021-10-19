@@ -31,7 +31,7 @@ docker run -it -p 9000:3000 sampleapp // This will run the container on foregrou
 ###### 4. To check running containerdocker 
 docker ps
 
-######## 5. Check the app components
+###### 5. Check the app components
  kubectl -n deployment get pods
 
 
