@@ -9,7 +9,7 @@ Great for testing simple deployments to the cloud
 `npm install`
 
 `npm start`
-1. Create Docker file
+###1. Create Docker file
 FROM artifactory.service.anz:8118/node:9-slim //Artificatory - running on 8118 is replicas of Docker-Hub
 WORKDIR /app
 COPY package.json /app
@@ -21,11 +21,30 @@ COPY . /app
 EXPOSE 3000
 CMD ["npm", "start"]
 
-2. Create docker image with below command
+####2. Create docker image with below command
 docker build -t sampleapp .
 
-3. Run container out of image created.
+#####3. Run container out of image created.
 docker run -it -p 9000:3000 sampleapp // This will run the container on foreground.
 
-4. To check running containerdocker 
+######4. To check running containerdocker 
 docker ps
+#######Check the app components
+ kubectl -n deployment get pods
+
+
+########Check the state of your Docker Desktop cluster:
+
+  kubectl get nodes
+
+#########Run a familiar application:
+
+  kubectl apply -f ./deployment.yaml
+
+
+#########Check the app components
+kubectl -n deployment get pods
+
+##########To see the ReplicaSet (rs) created by the Deployment, 
+
+  kubectl get rs
