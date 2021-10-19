@@ -35,7 +35,7 @@ docker ps
  kubectl -n deployment get pods
 
 
-######## 6. Check the state of your Docker Desktop cluster:
+####### 6. Check the state of your Docker Desktop cluster:
 
   kubectl get nodes
 
